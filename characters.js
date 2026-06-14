@@ -594,7 +594,7 @@ characters = {
         score: 0
     },
     dizzy: {
-        name: "Queen Dizzy",
+        name: "Easy Dizzy",
         image: "https://www.dustloop.com/wiki/images/4/47/GGST_Queen_Dizzy_Portrait.png",
         playstyle: "specialist",
         moral_system: "good",
@@ -613,6 +613,30 @@ characters = {
         reversal: "metered",
         resource: "no",
         vortex: ["neutral", "projectile"],
+        difficulty: "easy",
+        score: 0
+    },
+    dizzy: {
+        name: "Hard Dizzy",
+        image: "https://www.dustloop.com/wiki/images/3/33/GGXRD-R_Dizzy_Portrait.png",
+        playstyle: "specialist",
+        moral_system: "good",
+        gender: "female",
+        favourite: "neutral",
+        important: ["damage", "all_rounder"],
+        zoning: 1.0,
+        rushdown: 0.0,
+        oneplayer: "yes",
+        range: ["mid", "long"],
+        stance: "no",
+        charge: "no",
+        gameplan: ["frametrap", "highlow"],
+        setplay: "oki",
+        projectile: "standard",
+        reversal: "metered",
+        resource: "no",
+        vortex: ["neutral", "projectile"],
+        difficulty: "hard",
         score: 0
     },
     venom: {
