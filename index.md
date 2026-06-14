@@ -116,6 +116,11 @@ If you don't understand a word, try clicking on it!
 <label><input type="radio" id="lots" name="vortex"> I want to have so many <a href="https://glossary.infil.net/?t=mixup" target="_blank">mixup</a> options that the opponent will have to make a big guess on <a href="https://glossary.infil.net/?t=wakeup" target="_blank">wakeup</a> or risk getting blown up</label><br>
 <label><input type="radio" id="none" name="vortex"> No preference</label><br><br>
 
+### 18 - What's most important to Grah?
+<label><input type="radio" id="hard" name="difficulty">  hard</label><br>
+<label><input type="radio" id="medium" name="difficulty"> medium</label><br>
+<label><input type="radio" id="easy" name="difficulty"> easy</label><br><br>
+
 <button id="get_results" onclick="get_results();" class="btn">Get Results</button>
 
 <div id="modal" class="w3-modal">
