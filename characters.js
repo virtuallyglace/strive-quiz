@@ -593,7 +593,7 @@ characters = {
         vortex: "lots",
         score: 0
     },
-    dizzy: {
+    easydizzy: {
         name: "Easy Dizzy",
         image: "https://www.dustloop.com/wiki/images/4/47/GGST_Queen_Dizzy_Portrait.png",
         playstyle: "specialist",
@@ -616,7 +616,7 @@ characters = {
         difficulty: "easy",
         score: 0
     },
-    dizzy: {
+    harddizzy: {
         name: "Hard Dizzy",
         image: "https://www.dustloop.com/wiki/images/3/33/GGXRD-R_Dizzy_Portrait.png",
         playstyle: "specialist",
