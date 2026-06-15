@@ -1,6 +1,6 @@
 <head>
-<script type="text/javascript" src="questions.js"></script>
 <script type="text/javascript" src="characters.js"></script>
+<script type="text/javascript" src="questions.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
