@@ -74,7 +74,7 @@ If you don't understand a word, try clicking on it!
 <label><input type="radio" id="none" name="stance"> No preference</label><br><br>
 
 ### 11 - Are you ok with charge inputs (holding one direction, then inputting opposite direction) for your special moves?
-<label><input type="radio" id="yes" name="charge"> Yes, they sound cool to useI</label><br>
+<label><input type="radio" id="yes" name="charge"> Yes, they sound cool to use</label><br>
 <label><input type="radio" id="strong_no" name="charge"> I want to use a character that has 0 charge motions</label><br>
 <label><input type="radio" id="none" name="charge"> No preference</label><br><br>
 
