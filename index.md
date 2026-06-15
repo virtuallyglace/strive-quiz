@@ -151,7 +151,7 @@ If you don't understand a word, try clicking on it!
                     <p id="winner_name" class="modal_text"></p><br>
                 </div>
                 <p class="modal_text"> Other Characters you may like:</p>
-                <div id="others" class="modal_text"></div>
+                <p id="others" class ="modal_text"></p>
             </div>
         </div>
     </div>
