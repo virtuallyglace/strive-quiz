@@ -1,12 +1,9 @@
-
-
 class Result {
     constructor(key, id, amount) {
         this.key = key;
         this.id = id;
         this.amount = 1;
     }
-
     check_strength() {
         if (this.id.includes("strong_")) {
             this.amount = 2;
@@ -14,7 +11,6 @@ class Result {
         }
     }
 }
-
 function get_results() {
     reset_characters();
     var questions = document.querySelectorAll('input[type="radio"]:checked');
@@ -23,26 +19,39 @@ function get_results() {
         result.check_strength();
         check_characters(result);
     }
-
     var winner = check_winner();
-    var name = winner[0].name;
+
     var img = document.getElementById("winner_img");
     img.src = winner[0].image;
     var text = document.getElementById("winner_name");
-    text.innerHTML = "<a href=https://www.dustloop.com/wiki/index.php?title=GGST/" + name.replace(" ", "_") + ">" + name + winner[0].score + "</a>";
-    var name1 = winner[1].name;
-    var name2 = winner[2].name;
-    var others = document.getElementById("others");
-    others.innerHTML = "<a href=https://www.dustloop.com/wiki/index.php?title=GGST/" + name1.replace(" ", "_") + ">" + name1 + winner[1].score + "</a><br> \
-                        <a href=https://www.dustloop.com/wiki/index.php?title=GGST/" + name2.replace(" ", "_") + ">" + name2 + winner[2].score + "</a><br>";
+    text.textContent = winner[0].name + " (" + winner[0].score + ")";
+
+    var othersContainer = document.getElementById("others");
+    othersContainer.innerHTML = "";
+
+    var others = winner.slice(1, 10);
+    others.forEach(function(person) {
+        var card = document.createElement("div");
+        card.className = "other-card";
+
+        var img = document.createElement("img");
+        img.src = person.image;
+        img.alt = person.name;
+
+        var name = document.createElement("p");
+        name.textContent = person.name + " (" + person.score + ")";
+
+        card.appendChild(img);
+        card.appendChild(name);
+        othersContainer.appendChild(card);
+    });
+
     console.log(winner);
     openModal();
 };
-
 function openModal() {
     document.getElementById('modal').style.display='block';
 }
-
 function closeModal() {
     document.getElementById('modal').style.display='none';
 }
