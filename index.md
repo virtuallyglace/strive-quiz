@@ -56,7 +56,7 @@ If you don't understand a word, try clicking on it!
 <label><input type="radio" id="strong_no" name="rushdown"> I hate rushdown gameplay</label><br><br>
 
 ### 8 - How proactive do you want to be?
-<label><input type="radio" id="yes" name="oneplayer">I want mainly make the first move without worrying about what the opponent is doing</label><br>
+<label><input type="radio" id="yes" name="oneplayer"> I want to mainly make the first move without worrying about what the opponent is doing</label><br>
 <label><input type="radio" id="sometimes" name="oneplayer"> I want a mix of both</label><br>
 <label><input type="radio" id="no" name="oneplayer"> I would play defensive and look for easy openings / punish mistakes</label><br>
 <label><input type="radio" id="none" name="oneplayer"> No preference</label><br><br>
