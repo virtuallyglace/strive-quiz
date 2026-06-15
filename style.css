@@ -37,3 +37,15 @@
 .w3-modal-content {
     border-radius: 15px;
 }
+
+.other-card {
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+}
+.other-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
