@@ -25,15 +25,15 @@
     color: #159957;
     font-family: "Segoe UI",Arial,sans-serif;
     font-size: 20px;
+    text-align: center;
 }
 .winner {
     width: fit-content;
     margin: auto;
+    text-align: center;
 }
 .w3-modal-content {
     border-radius: 15px;
-    max-height: 90vh;
-    overflow-y: auto;
 }
 .other-card {
     display: block;
