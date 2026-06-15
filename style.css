@@ -8,18 +8,16 @@
     border-radius: 0.3rem;
     display:block;
     width: 99%;
-    padding: -1.75rem;
-    font-size: -1.9rem;
+    padding: 1.75rem;
+    font-size: 1.9rem;
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 }
-
 .btn:hover {
     color: rgba(255,255,255,0.8);
     text-decoration: none;
     background-color: rgba(255,255,255,0.2);
     border-color: rgba(255,255,255,0.3)
 }
-
 .modal_text {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -28,24 +26,23 @@
     font-family: "Segoe UI",Arial,sans-serif;
     font-size: 20px;
 }
-
 .winner {
     width: fit-content;
     margin: auto;
 }
-
 .w3-modal-content {
     border-radius: 15px;
+    max-height: 90vh;
+    overflow-y: auto;
 }
-
 .other-card {
-    display: inline-block;
+    display: block;
     text-align: center;
-    margin: 5px;
+    margin: 10px auto;
 }
-.other-card img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
+.other-card img,
+#winner_img {
+    display: block;
+    margin: 10px auto;
     border-radius: 5px;
 }
