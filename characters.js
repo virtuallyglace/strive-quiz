@@ -893,4 +893,34 @@ function check_winner() {
     return winners;
 }
 
+function showResults() {
+    var winners = check_winner();
+    var winner = winners[0];
+    var others = winners.slice(1);
+
+    document.getElementById("winner_img").src = winner.image;
+    document.getElementById("winner_name").textContent = winner.name;
+
+    var othersContainer = document.getElementById("others");
+    othersContainer.innerHTML = "";
+
+    others.forEach(function(person) {
+        var card = document.createElement("div");
+        card.className = "other-card";
+
+        var img = document.createElement("img");
+        img.src = person.image;
+        img.alt = person.name;
+
+        var name = document.createElement("p");
+        name.textContent = person.name;
+
+        card.appendChild(img);
+        card.appendChild(name);
+        othersContainer.appendChild(card);
+    });
+
+    document.getElementById("modal").style.display = "block";
+}
+
 
