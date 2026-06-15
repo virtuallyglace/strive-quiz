@@ -421,7 +421,7 @@ characters = {
         vortex: "projectile",
         difficulty: "hard",
         design: "mixed",
-        archetype: ["zoner" "setplay"],
+        archetype: ["zoner", "setplay"],
         score: 0
     },
     baiken: {
