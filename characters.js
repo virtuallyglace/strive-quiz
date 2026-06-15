@@ -421,7 +421,7 @@ characters = {
         vortex: "projectile",
         difficulty: "hard",
         design: "mixed",
-        archetype: ["zoner", "setplay"],
+        archetype: ["zoner" "setplay"],
         score: 0
     },
     baiken: {
@@ -674,8 +674,8 @@ characters = {
         archetype: "rushdown",
         score: 0
     },
-    easydizzy: {
-        name: "Easy Dizzy",
+    dizzy: {
+        name: "Queen Dizzy",
         image: "https://www.dustloop.com/wiki/images/4/47/GGST_Queen_Dizzy_Portrait.png",
         playstyle: "specialist",
         moral_system: "good",
@@ -684,7 +684,7 @@ characters = {
         important: ["damage", "all_rounder"],
         zoning: 1.0,
         rushdown: 0.0,
-        oneplayer: "yes",
+        oneplayer: "no",
         range: ["mid", "long"],
         stance: "no",
         charge: "no",
@@ -695,31 +695,6 @@ characters = {
         resource: "no",
         vortex: ["neutral", "projectile"],
         difficulty: "easy",
-        design: "mixed",
-        archetype: ["zoners", "setplay"],
-        score: 0
-    },
-    harddizzy: {
-        name: "Hard Dizzy",
-        image: "https://www.dustloop.com/wiki/images/3/33/GGXRD-R_Dizzy_Portrait.png",
-        playstyle: "specialist",
-        moral_system: "good",
-        gender: "female",
-        favourite: "neutral",
-        important: ["damage", "all_rounder"],
-        zoning: 1.0,
-        rushdown: 0.0,
-        oneplayer: "yes",
-        range: ["mid", "long"],
-        stance: "no",
-        charge: "no",
-        gameplan: ["frametrap", "highlow"],
-        setplay: "oki",
-        projectile: "standard",
-        reversal: "metered",
-        resource: "no",
-        vortex: ["neutral", "projectile"],
-        difficulty: "hard",
         design: "mixed",
         archetype: ["zoners", "setplay"],
         score: 0
@@ -891,36 +866,6 @@ function check_winner() {
     }
     winners.sort((a, b) => b.score - a.score);
     return winners;
-}
-
-function showResults() {
-    var winners = check_winner();
-    var winner = winners[0];
-    var others = winners.slice(1);
-
-    document.getElementById("winner_img").src = winner.image;
-    document.getElementById("winner_name").textContent = winner.name;
-
-    var othersContainer = document.getElementById("others");
-    othersContainer.innerHTML = "";
-
-    others.forEach(function(person) {
-        var card = document.createElement("div");
-        card.className = "other-card";
-
-        var img = document.createElement("img");
-        img.src = person.image;
-        img.alt = person.name;
-
-        var name = document.createElement("p");
-        name.textContent = person.name;
-
-        card.appendChild(img);
-        card.appendChild(name);
-        othersContainer.appendChild(card);
-    });
-
-    document.getElementById("modal").style.display = "block";
 }
 
 
