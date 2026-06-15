@@ -1,158 +1,871 @@
-<head>
-<script type="text/javascript" src="questions.js"></script>
-<script type="text/javascript" src="characters.js"></script>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link type="text/css" rel="stylesheet" href="style.css" />
-</head>
+characters = {  
+    sol: {
+        name: "Sol Badguy",
+        image: "https://www.dustloop.com/wiki/images/0/04/GGST_Sol_Badguy_Portrait.png",
+        playstyle: "prepared",
+        moral_system: "good",
+        gender: "male",
+        favourite: ["pressure"],
+        important: ["all_rounder", "damage"],
+        zoning: 0.0,
+        rushdown: 1.0,
+        oneplayer: "sometimes",
+        range: ["close", "mid"],
+        stance: "no",
+        charge: "no",
+        gameplan: ["risc", "frametrap"],
+        setplay: "no",
+        projectile: "limited",
+        reversal: "meterless",
+        resource: "no",
+        vortex: "neutral",
+        difficulty: "easy",
+        design: "serious",
+        archetype: "rushdown",
+        score: 0
+    },
+    ky: {
+        name: "Ky Kiske",
+        image: "https://www.dustloop.com/wiki/images/2/21/GGST_Ky_Kiske_Portrait.png",
+        playstyle: "prepared",
+        moral_system: "good",
+        gender: "male",
+        favourite: ["neutral", "pressure"],
+        important: ["all_rounder"],
+        zoning: 0.5,
+        rushdown: 0.5,
+        oneplayer: "sometimes",
+        range: ["mid", "all"],
+        stance: "yes",
+        charge: "no",
+        gameplan: ["frametrap"],
+        setplay: "oki",
+        projectile: "standard",
+        reversal: "meterless",
+        resource: "no",
+        vortex: "projectile",
+        difficulty: "easy",
+        design: "serious",
+        archetype: "balanced",
+        score: 0
+    },
+    may: {
+        name: "May",
+        image: "https://www.dustloop.com/wiki/images/0/0d/GGST_May_Portrait.png",
+        playstyle: "rewarding",
+        moral_system: "good",
+        gender: "female",
+        favourite: ["combos"],
+        important: ["all_rounder", "damage"],
+        zoning: 0.0,
+        rushdown: 1.0,
+        oneplayer: "yes",
+        range: ["mid", "close"],
+        stance: "no",
+        charge: "yes",
+        gameplan: ["grab", "highlow"],
+        setplay: "no",
+        projectile: "limited",
+        reversal: "metered",
+        resource: "no",
+        vortex: "projectile",
+        difficulty: "easy",
+        design: "silly",
+        archetype: "rushdown",
+        score: 0
+    },
+    faust: {
+        name: "Faust",
+        image: "https://www.dustloop.com/wiki/images/f/ff/GGST_Faust_Portrait.png",
+        playstyle: "specialist",
+        moral_system: "neutral",
+        gender: "male",
+        favourite: ["neutral"],
+        important: ["utility"],
+        zoning: 1.0,
+        rushdown: 0.0,
+        oneplayer: "no",
+        range: "long",
+        stance: "no",
+        charge: "no",
+        gameplan: ["grab", "highlow"],
+        setplay: ["oki", "neutral"],
+        projectile: ["limited","special"],
+        reversal: "metered",
+        resource: "no",
+        vortex: "projectile",
+        difficulty: "hard",
+        design: "mixed",
+        archetype: "setplay",
+        score: 0
+    },
+    millia: {
+        name: "Millia Rage",
+        image: "https://www.dustloop.com/wiki/images/a/ab/GGST_Millia_Rage_Portrait.png",
+        playstyle: "specialist",
+        moral_system: "neutral",
+        gender: "female",
+        favourite: ["mindgames", "neutral"],
+        important: ["mobility", "utility"],
+        zoning: 0.0,
+        rushdown: 1.0,
+        oneplayer: "yes",
+        range: ["close", "mid"],
+        stance: "no",
+        charge: "no",
+        gameplan: ["highlow", "leftright"],
+        setplay: ["oki"],
+        projectile: "limited",
+        reversal: "metered",
+        resource: "no",
+        vortex: "lots",
+        difficulty: "medium",
+        design: "serious",
+        archetype: "rushdown",
+        score: 0
+    },
+    chipp: {
+        name: "Chipp Zanuff",
+        image: "https://www.dustloop.com/wiki/images/d/d3/GGST_Chipp_Zanuff_Portrait.png",
+        playstyle: "prepared",
+        moral_system: "good",
+        gender: "male",
+        favourite: ["pressure", "neutral"],
+        important: ["mobility", "utility"],
+        zoning: 0.0,
+        rushdown: 1.0,
+        oneplayer: "yes",
+        range: "close",
+        stance: "no",
+        charge: "no",
+        gameplan: ["highlow", "leftright"],
+        setplay: ["no"],
+        projectile: "limited",
+        reversal: "meterless",
+        resource: "no",
+        vortex: "lots",
+        difficulty: "medium",
+        design: "mixed",
+        archetype: "rushdown",
+        score: 0
+    },
+    ino: {
+        name: "I-No",
+        image: "https://www.dustloop.com/wiki/images/a/a1/GGST_I-No_Portrait.png",
+        playstyle: "rewarding",
+        moral_system: "evil",
+        gender: "female",
+        favourite: ["mindgames", "pressure"],
+        important: ["mobility"],
+        zoning: 0.0,
+        rushdown: 1.0,
+        oneplayer: "yes",
+        range: "close",
+        stance: "no",
+        charge: "no",
+        gameplan: ["highlow"],
+        setplay: ["neutral"],
+        projectile: "standard",
+        reversal: "metered",
+        resource: "no",
+        vortex: "lots",
+        difficulty: "medium",
+        design: "mixed",
+        archetype: "rushdown",
+        score: 0
+    },
+    axl: {
+        name: "Axl Low",
+        image: "https://www.dustloop.com/wiki/images/b/b7/GGST_Axl_Low_Portrait.png",
+        playstyle: "specialist",
+        moral_system: "neutral",
+        gender: "male",
+        favourite: ["neutral", "pressure"],
+        important: ["damage", "utility"],
+        zoning: 1.0,
+        rushdown: 0.0,
+        oneplayer: "no",
+        range: ["mid", "long"],
+        stance: "no",
+        charge: "no",
+        gameplan: ["frametrap", "risc"],
+        setplay: ["neutral"],
+        projectile: "special",
+        reversal: "metered",
+        resource: "no",
+        vortex: "neutral",
+        difficulty: "easy",
+        design: "silly",
+        archetype: "zoners",
+        score: 0
+    },
+    zato: {
+        name: "Zato-1",
+        image: "https://www.dustloop.com/wiki/images/d/df/GGST_Zato-1_Portrait.png",
+        playstyle: "rewarding",
+        moral_system: "neutral",
+        gender: "male",
+        favourite: ["combos", "mindgames"],
+        important: ["utility", "damage"],
+        zoning: 0.25,
+        rushdown: 0.75,
+        oneplayer: "no",
+        range: ["mid", "all"],
+        stance: "yes",
+        charge: "no",
+        gameplan: ["risc", "grab"],
+        setplay: ["neutral"],
+        projectile: "limited",
+        reversal: "metered",
+        resource: ["meter","ammo"],
+        vortex: "lots",
+        difficulty: "hard",
+        design: "mixed",
+        archetype: "balanced",
+        score: 0
+    },
+    pot: {
+        name: "Potemkin",
+        image: "https://www.dustloop.com/wiki/images/e/ec/GGST_Potemkin_Portrait.png",
+        playstyle: "rewarding",
+        moral_system: "neutral",
+        gender: "male",
+        favourite: ["pressure"],
+        important: ["health", "damage"],
+        zoning: 0.25,
+        rushdown: 0.25,
+        oneplayer: "no",
+        range: ["close", "mid"],
+        stance: "no",
+        charge: ["sometimes", "yes"],
+        gameplan: "grab",
+        setplay: "no",
+        projectile: "no",
+        reversal: "metered",
+        resource: "no",
+        vortex: "neutral",
+        difficulty: "medium",
+        design: "silly",
+        archetype: "grappler",
+        score: 0
+    },
+    ramlethal: {
+        name: "Ramlethal Valentine",
+        image: "https://www.dustloop.com/wiki/images/f/fa/GGST_Ramlethal_Valentine_Portrait.png",
+        playstyle: "rewarding",
+        moral_system: "good",
+        gender: "female",
+        favourite: "pressure",
+        important: ["all_rounder"],
+        zoning: 0.50,
+        rushdown: 0.50,
+        oneplayer: "yes",
+        range: ["mid", "long"],
+        stance: "no",
+        charge: "no",
+        gameplan: ["highlow", "risc"],
+        setplay: "no",
+        projectile: "standard",
+        reversal: "metered",
+        resource: "ammo",
+        vortex: "neutral",
+        difficulty: "easy",
+        design: "serious",
+        archetype: "balanced",
+        score: 0
+    },
+    leo: {
+        name: "Leo Whitefang",
+        image: "https://www.dustloop.com/wiki/images/f/f7/GGST_Leo_Whitefang_Portrait.png",
+        playstyle: "rewarding",
+        moral_system: "good",
+        gender: "male",
+        favourite: ["pressure", "mindgames"],
+        important: ["damage", "health"],
+        zoning: 0.0,
+        rushdown: 1.0,
+        oneplayer: "sometimes",
+        range: "close",
+        stance: "yes",
+        charge: "yes",
+        gameplan: ["highlow", "frametrap", "leftright"],
+        setplay: "neutral",
+        projectile: "standard",
+        reversal: "meterless",
+        resource: "no",
+        vortex: "neutral",
+        difficulty: "easy",
+        design: "serious",
+        archetype: "balanced",
+        score: 0
+    },
+    anji: {
+        name: "Anji Mito",
+        image: "https://www.dustloop.com/wiki/images/5/5c/GGST_Anji_Mito_Portrait.png",
+        playstyle: "specialist",
+        moral_system: "neutral",
+        gender: "male",
+        favourite: ["pressure", "neutral"],
+        important: ["all_rounder"],
+        zoning: 0.25,
+        rushdown: 0.75,
+        oneplayer: "no",
+        range: "mid",
+        stance: "yes",
+        charge: "no",
+        gameplan: ["frametrap"],
+        setplay: ["neutral", "oki"],
+        projectile: "limited",
+        reversal: "meterless",
+        resource: "no",
+        vortex: "projectile",
+        difficulty: "easy",
+        design: "serious",
+        archetype: "balanced",
+        score: 0
+    },
+    nago: {
+        name: "Nagoriyuki",
+        image: "https://www.dustloop.com/wiki/images/a/af/GGST_Nagoriyuki_Portrait.png",
+        playstyle: "specialist",
+        moral_system: "evil",
+        gender: "male",
+        favourite: ["pressure", "combos"],
+        important: ["damage", "health"],
+        zoning: 0.75,
+        rushdown: 0.25,
+        oneplayer: "no",
+        range: ["mid", "long"],
+        stance: "yes",
+        charge: "no",
+        gameplan: ["frametrap", "risc"],
+        setplay: "no",
+        projectile: "limited",
+        reversal: "metered",
+        resource: "meter",
+        vortex: "neutral",
+        difficulty: "easy",
+        design: "serious",
+        archetype: ["balanced", "zoners"],
+        score: 0
+    },
+    goldlewis: {
+        name: "Goldlewis Dickinson",
+        image: "https://www.dustloop.com/wiki/images/7/7c/GGST_Goldlewis_Dickinson_Portrait.png",
+        playstyle: "rewarding",
+        moral_system: "good",
+        gender: "male",
+        favourite: ["pressure", "combos"],
+        important: ["damage", "health"],
+        zoning: 0.50,
+        rushdown: 0.0,
+        oneplayer: "no",
+        range: ["close", "all"],
+        stance: "no",
+        charge: "no",
+        gameplan: ["frametrap", "highlow"],
+        setplay: ["neutral", "oki"],
+        projectile: "special",
+        reversal: "metered",
+        resource: "meter",
+        vortex: "neutral",
+        difficulty: "hard",
+        design: "serious",
+        archetype: "balanced",
+        score: 0
+    },
+    jacko: {
+        name: "Jack-O’ Valentine",
+        image: "https://www.dustloop.com/wiki/images/6/6f/GGST_Jack-O%27_Portrait.png",
+        playstyle: "prepared",
+        moral_system: "good",
+        gender: "female",
+        favourite: ["combos", "neutral"],
+        important: "utility",
+        zoning: 0.75,
+        rushdown: 0.50,
+        oneplayer: "no",
+        range: "all",
+        stance: "no",
+        charge: "no",
+        gameplan: ["frametrap", "risc"],
+        setplay: ["neutral", "oki"],
+        projectile: "special",
+        reversal: "metered",
+        resource: "meter",
+        vortex: ["neutral", "projectile"],
+        difficulty: "hard",
+        design: "silly",
+        archetype: "setplay",
+        score: 0
+    },
+    chaos: {
+        name: "Happy Chaos",
+        image: "https://www.dustloop.com/wiki/images/c/c4/GGST_Happy_Chaos_Portrait.png",
+        playstyle: "specialist",
+        moral_system: "evil",
+        gender: "male",
+        favourite: ["pressure", "neutral"],
+        important: ["damage", "utility"],
+        zoning: 0.75,
+        rushdown: 0.25,
+        oneplayer: "yes",
+        range: ["mid", "long"],
+        stance: "yes",
+        charge: "no",
+        gameplan: ["risc"],
+        setplay: "no",
+        projectile: "special",
+        reversal: "metered",
+        resource: "ammo",
+        vortex: "projectile",
+        difficulty: "hard",
+        design: "mixed",
+        archetype: ["zoner" "setplay"],
+        score: 0
+    },
+    baiken: {
+        name: "Baiken",
+        image: "https://www.dustloop.com/wiki/images/6/6e/GGST_Baiken_Portrait.png",
+        playstyle: "prepared",
+        moral_system: "neutral",
+        gender: "female",
+        favourite: ["pressure", "combos"],
+        important: "all_rounder",
+        zoning: 0.25,
+        rushdown: 0.75,
+        oneplayer: "sometimes",
+        range: ["mid", "close"],
+        stance: "no",
+        charge: "no",
+        gameplan: ["frametrap", "grab"],
+        setplay: "no",
+        projectile: "limited",
+        reversal: "meterless",
+        resource: "no",
+        vortex: "lots",
+        difficulty: "easy",
+        design: "serious",
+        archetype: "rushdown",
+        score: 0
+    },
+    testament: {
+        name: "Testament",
+        image: "https://www.dustloop.com/wiki/images/thumb/b/ba/GGST_Testament_Portrait.png/790px-GGST_Testament_Portrait.png?20220320145752",
+        playstyle: "specialist",
+        moral_system: "neutral",
+        gender: ["female", "male"],
+        favourite: "neutral",
+        important: ["utility", "mobility"],
+        zoning: 1.0,
+        rushdown: 0.0,
+        oneplayer: "no",
+        range: ["mid", "long"],
+        stance: "no",
+        charge: "no",
+        gameplan: "highlow",
+        setplay: "yes",
+        projectile: "special",
+        reversal: "metered",
+        resource: "ammo",
+        vortex: ["neutral", "projectile"],
+        difficulty: "easy",
+        design: "serious",
+        archetype: "zoners",
+        score: 0
+    },
+    bridget: {
+        name: "Bridget",
+        image: "https://www.dustloop.com/wiki/images/8/83/GGST_Bridget_Portrait.png",
+        playstyle: "prepared",
+        moral_system: "good",
+        gender: "female",
+        favourite: ["neutral", "combos"],
+        important: ["mobility", "utility"],
+        zoning: 0.75,
+        rushdown: 0.25,
+        oneplayer: "no",
+        range: ["mid", "long"],
+        stance: "no",
+        charge: "no",
+        gameplan: ["frametrap", "grab"],
+        setplay: ["oki", "neutral"],
+        projectile: "special",
+        reversal: "meterless",
+        resource: "no",
+        vortex: ["neutral", "projectile"],
+        difficulty: "easy",
+        design: "silly",
+        archetype: "zoners",
+        score: 0
+    },
+    sin: {
+        name: "Sin Kiske",
+        image: "https://www.dustloop.com/wiki/images/8/8a/GGST_Sin_Kiske_Portrait.png",
+        playstyle: "specialist",
+        moral_system: "good",
+        gender: "male",
+        favourite: "pressure",
+        important: ["all_rounder", "mobility"],
+        zoning: 0.0,
+        rushdown: 1.0,
+        oneplayer: "yes",
+        range: ["mid", "close"],
+        stance: "no",
+        charge: "no",
+        gameplan: ["highlow", "frametrap"],
+        setplay: "no",
+        projectile: "no",
+        reversal: "meterless",
+        resource: "meter",
+        vortex: "neutral",
+        difficulty: "easy",
+        design: "silly",
+        archetype: "rushdown",
+        score: 0
+    },
+    bedman: {
+        name: "Bedman?",
+        image: "https://www.dustloop.com/wiki/images/3/33/GGST_Bedman_Portrait.png",
+        playstyle: "specialist",
+        moral_system: "neutral",
+        gender: "male",
+        favourite: "combos",
+        important: ["damage", "health"],
+        zoning: 0.50,
+        rushdown: 0.25,
+        oneplayer: "no",
+        range: "all",
+        stance: "yes",
+        charge: "no",
+        gameplan: ["frametrap", "highlow"],
+        setplay: "no",
+        projectile: "standard",
+        reversal: "metered",
+        resource: "ammo",
+        vortex: "neutral",
+        difficulty: "hard",
+        design: "silly",
+        archetype: "balanced",
+        score: 0
+    },
+    asuka: {
+        name: "Asuka R. Kreutz",
+        image: "https://www.dustloop.com/wiki/images/f/f7/GGST_Asuka_R_Portrait.png",
+        playstyle: "prepared",
+        moral_system: "neutral",
+        gender: "male",
+        favourite: ["pressure", "neutral"],
+        important: ["all_rounder", "utility"],
+        zoning: 0.75,
+        rushdown: 0.0,
+        oneplayer: "sometimes",
+        range: ["mid", "long"],
+        stance: "yes",
+        charge: "no",
+        gameplan: ["highlow", "frametrap"],
+        setplay: "neutral",
+        projectile: ["standard", "special"],
+        reversal: "metered",
+        resource: ["meter", "ammo"],
+        vortex: "projectile",
+        difficulty: "hard",
+        design: "serious",
+        archetype: ["zoners", "setplay"],
+        score: 0
+    },
+    johnny: {
+        name: "Johnny",
+        image: "https://www.dustloop.com/wiki/images/3/3f/GGST_Johnny_Portrait.png",
+        playstyle: "specialist",
+        moral_system: "good",
+        gender: "male",
+        favourite: "neutral",
+        important: ["mobility", "all_rounder"],
+        zoning: 1.0,
+        rushdown: 0.0,
+        oneplayer: "yes",
+        range: "mid",
+        stance: "yes",
+        charge: "no",
+        gameplan: ["frametrap", "highlow"],
+        setplay: "oki",
+        projectile: "limited",
+        reversal: "metered",
+        resource: "no",
+        vortex: ["neutral", "projectile"],
+        difficulty: "easy",
+        design: "serious",
+        archetype: "zoners",
+        score: 0
+    },
+    elphelt: {
+        name: "Elphelt Valentine",
+        image: "https://www.dustloop.com/wiki/images/6/6d/GGST_Elphelt_Valentine_Portrait.png",
+        playstyle: "specialist",
+        moral_system: "good",
+        gender: "female",
+        favourite: "pressure",
+        important: ["damage", "mobility"],
+        zoning: 0.25,
+        rushdown: 1.0,
+        oneplayer: "yes",
+        range: "close",
+        stance: "no",
+        charge: "no",
+        gameplan: ["frametrap", "highlow"],
+        setplay: "no",
+        projectile: "standard",
+        reversal: "metered",
+        resource: "no",
+        vortex: "lots",
+        difficulty: "good",
+        design: "silly",
+        archetype: "rushdown",
+        score: 0
+    },
+    aba: {
+        name: "A.B.A.",
+        image: "https://www.dustloop.com/wiki/images/9/99/GGST_A.B.A_Portrait.png",
+        playstyle: "specialist",
+        moral_system: "neutral",
+        gender: "female",
+        favourite: "neutral",
+        important: "damage",
+        zoning: 0.0,
+        rushdown: 1.0,
+        oneplayer: "no",
+        range: "close",
+        stance: "yes",
+        charge: "no",
+        gameplan: "highlow",
+        setplay: "no",
+        projectile: "no",
+        reversal: "metered",
+        resource: "meter",
+        vortex: "lots",
+        difficulty: "medium",
+        design: "serious",
+        archetype: "rushdown",
+        score: 0
+    },
+    slayer: {
+        name: "Slayer",
+        image: "https://www.dustloop.com/wiki/images/0/0a/GGST_Slayer_Portrait.png",
+        playstyle: "specialist",
+        moral_system: "neutral",
+        gender: "male",
+        favourite: ["pressure", "combos"],
+        important: ["damage", "mobility"],
+        zoning: 0.0,
+        rushdown: 1.0,
+        oneplayer: "sometimes",
+        range: ["mid", "close"],
+        stance: "no",
+        charge: "no",
+        gameplan: ["frametrap", "leftright"],
+        setplay: "no",
+        projectile: "no",
+        reversal: "metered",
+        resource: "no",
+        vortex: "lots",
+        difficulty: "easy",
+        design: "serious",
+        archetype: "rushdown",
+        score: 0
+    },
+    dizzy: {
+        name: "Queen Dizzy",
+        image: "https://www.dustloop.com/wiki/images/4/47/GGST_Queen_Dizzy_Portrait.png",
+        playstyle: "specialist",
+        moral_system: "good",
+        gender: "female",
+        favourite: "neutral",
+        important: ["damage", "all_rounder"],
+        zoning: 1.0,
+        rushdown: 0.0,
+        oneplayer: "no",
+        range: ["mid", "long"],
+        stance: "no",
+        charge: "no",
+        gameplan: ["frametrap", "highlow"],
+        setplay: "oki",
+        projectile: "standard",
+        reversal: "metered",
+        resource: "no",
+        vortex: ["neutral", "projectile"],
+        difficulty: "easy",
+        design: "mixed",
+        archetype: ["zoners", "setplay"],
+        score: 0
+    },
+    venom: {
+        name: "Venom",
+        image: "https://www.dustloop.com/wiki/images/d/df/GGST_Venom_Portrait.png",
+        playstyle: "specialist",
+        moral_system: "neutral",
+        gender: "male",
+        favourite: ["pressure", "neutral"],
+        important: ["all_rounder", "utility"],
+        zoning: 1.0,
+        rushdown: 0.0,
+        oneplayer: "no",
+        range: "all",
+        stance: "no",
+        charge: "yes",
+        gameplan: ["frametrap", "risc"],
+        setplay: ["oki", "neutral"],
+        projectile: "standard",
+        reversal: "metered",
+        resource: "no",
+        vortex: "neutral",
+        difficulty: "medium",
+        design: "mixed",
+        archetype: ["zoners", "setplay"],
+        score: 0
+    },
+    unika: {
+        name: "Unika",
+        image: "https://www.dustloop.com/wiki/images/7/7b/GGST_Unika_Portrait.png",
+        playstyle: "prepared",
+        moral_system: "good",
+        gender: "female",
+        favourite: ["pressure", "combos"],
+        important: ["damage", "all_rounder"],
+        zoning: 0.50,
+        rushdown: 0.75,
+        oneplayer: "sometimes",
+        range: "all",
+        stance: "yes",
+        charge: "no",
+        gameplan: ["frametrap", "highlow"],
+        setplay: "no",
+        projectile: "standard",
+        reversal: "meterless",
+        resource: "no",
+        vortex: "neutral",
+        difficulty: "easy",
+        design: "mixed",
+        archetype: "balanced",
+        score: 0
+    },
+    lucy: {
+        name: "Lucy",
+        image: "https://www.dustloop.com/wiki/images/3/3b/GGST_Lucy_Portrait.png",
+        playstyle: "prepared",
+        moral_system: "neutral",
+        gender: "female",
+        favourite: ["neutral", "combos"],
+        important: ["utility", "mobility"],
+        zoning: 0.25,
+        rushdown: 0.75,
+        oneplayer: "no",
+        range: ["mid", "close"],
+        stance: "no",
+        charge: "no",
+        gameplan: ["highlow", "frametrap"],
+        setplay: "no",
+        projectile: "standard",
+        reversal: "meterless",
+        resource: "no",
+        vortex: "lots",
+        difficulty: "easy",
+        design: "serious",
+        archetype: "balanced",
+        score: 0
+    },
+    jam: {
+        name: "Jam Kuradoberi",
+        image: "https://www.dustloop.com/wiki/images/5/51/GGST_Jam_Kuradoberi_Portrait.png",
+        playstyle: "rewarding",
+        moral_system: "good",
+        gender: "female",
+        favourite: ["pressure", "combos"],
+        important: ["damage", "mobility"],
+        zoning: 0.0,
+        rushdown: 1.0,
+        oneplayer: "yes",
+        range: ["mid", "close"],
+        stance: "yes",
+        charge: "no",
+        gameplan: "highlow",
+        setplay: "no",
+        projectile: "no",
+        reversal: "meterless",
+        resource: "ammo",
+        vortex: "lots",
+        difficulty: "easy",
+        design: "mixed",
+        archetype: "rushdown",
+        score: 0
+    },
 
-## Questions
 
-If you don't understand a word, try clicking on it!
+    giovanna: {
+        name: "Giovanna",
+        image: "https://www.dustloop.com/wiki/images/3/3f/GGST_Giovanna_Portrait.png",
+        playstyle: "prepared",
+        moral_system: "neutral",
+        gender: "female",
+        favourite: ["pressure"],
+        important: ["mobility", "all_rounder"],
+        zoning: 0.0,
+        rushdown: 1.0,
+        oneplayer: "sometimes",
+        range: "close",
+        stance: "no",
+        charge: "no",
+        gameplan: ["frametrap", "risc"],
+        setplay: "no",
+        projectile: "no",
+        reversal: ["meterless", "metered"],
+        resource: "no",
+        vortex: "neutral",
+        difficulty: "easy",
+        design: "mixed",
+        archetype: "rushdown",
+        score: 0
+    }
+}
 
-### 1 - What's most important to you?
-<label><input type="radio" id="specialist" name="playstyle">  Doing one thing and doing it well</label><br>
-<label><input type="radio" id="prepared" name="playstyle"> Having tools for every situation</label><br>
-<label><input type="radio" id="rewarding" name="playstyle"> Feeling suitably rewarded when I perform well</label><br><br>
+function reset_characters() {
+    for (var char in characters) {
+        characters[char].score = 0;
+    }
+}
+function check_characters(result) {
+    for (var char in characters) {
+        if (typeof(characters[char][result.key]) === "number") {
+            check_numbers(char, result);
+        } else {
+            check_strings(char, result);
+        }
+    }
+}
 
-### 2 - What sort of moral system do you like in a character?
-<label><input type="radio" id="good" name="moral_system"> Any sort of "good". I don't really enjoy playing as assholes </label><br>
-<label><input type="radio" id="neutral" name="moral_system"> I like neutral characters</label><br>
-<label><input type="radio" id="evil" name="moral_system"> I love to play the villain!</label><br>
-<label><input type="radio" id="none" name="moral_system"> I have no strong feelings one way or another</label><br><br>
+function check_strings(char, result) {
+    if (characters[char][result.key].includes(result.id) || result.id === "none") {
+        characters[char].score += result.amount;
+    }
+}
 
-### 3 - Do you have a character gender preference?
-<label><input type="radio" id="strong_male" name="gender"> Strongly male</label><br>
-<label><input type="radio" id="male" name="gender"> Male</label><br>
-<label><input type="radio" id="female" name="gender"> Female</label><br>
-<label><input type="radio" id="strong_female" name="gender"> Strongly Female</label><br>
-<label><input type="radio" id="none" name="gender"> None. Please don't factor gender into my result</label><br><br>
+function check_numbers(char, result) {
+    multiplier = result.amount;
+    if (result.id === "none") {
+        return;
+    } else if (result.id === "no") {
+        multiplier *= -1;
+    }
+    characters[char].score += multiplier * characters[char][result.key];
+}
 
-### 4 - When in a match, what's your favourite thing to do?
-<label><input type="radio" id="pressure" name="favourite"> Keeping the pressure on my opponent</label><br>
-<label><input type="radio" id="neutral" name="favourite"> Controlling space and anticipating attacks</label><br>
-<label><input type="radio" id="mindgames" name="favourite"> Make the opponent guess a lot / play mindgames!</label><br>
-<label><input type="radio" id="combos" name="favourite"> Deciding which combos to execute in the right situations</label><br>
-<label><input type="radio" id="none" name="favourite"> None of the above / no preference</label><br><br>
-
-### 5 - Whats the most important or enjoyable quality in a character for you?
-<label><input type="radio" id="damage" name="important"> Damage. Everything else is secondary</label><br>
-<label><input type="radio" id="health" name="important"> Health Points. I want to last long in combat</label><br>
-<label><input type="radio" id="mobility" name="important"> Mobility. I like going fast or enjoy unconventional movement options</label><br>
-<label><input type="radio" id="utility" name="important"> Utility. Give me a lot of tricks, tools and options to play with</label><br>
-<label><input type="radio" id="all_rounder" name="important"> All-rounder. Some mix of the above</label><br><br>
-
-### 6 - Do you want to be able to zone?
-<label><input type="radio" id="strong_yes" name="zoning"> Yes! Very much so</label><br>
-<label><input type="radio" id="yes" name="zoning"> Yes</label><br>
-<label><input type="radio" id="none" name="zoning"> No preference</label><br>
-<label><input type="radio" id="no" name="zoning"> No</label><br>
-<label><input type="radio" id="strong_no" name="zoning"> Hell NO</label><br><br>
-
-### 7 - Do you want to have a lot of close combat options and gap closers?
-<label><input type="radio" id="strong_yes" name="rushdown"> Definitely!</label><br>
-<label><input type="radio" id="yes" name="rushdown"> I do</label><br>
-<label><input type="radio" id="none" name="rushdown"> No preference</label><br>
-<label><input type="radio" id="no" name="rushdown"> No</label><br>
-<label><input type="radio" id="strong_no" name="rushdown"> I hate rushdown gameplay</label><br><br>
-
-### 8 - How proactive do you want to be?
-<label><input type="radio" id="yes" name="oneplayer"> I want to mainly make the first move without worrying about what the opponent is doing</label><br>
-<label><input type="radio" id="sometimes" name="oneplayer"> I want a mix of both</label><br>
-<label><input type="radio" id="no" name="oneplayer"> I would play defensive and look for easy openings / punish mistakes</label><br>
-<label><input type="radio" id="none" name="oneplayer"> No preference</label><br><br>
-
-### 9 - What range do you have the most fun fighting at?
-<label><input type="radio" id="close" name="range"> I'm a close-range fighter</label><br>
-<label><input type="radio" id="mid" name="range"> I feel most comfortable at mid range</label><br>
-<label><input type="radio" id="long" name="range"> I most enjoy fighting at long ranges</label><br>
-<label><input type="radio" id="all" name="range"> I want to be able to handle all ranges!</label><br>
-<label><input type="radio" id="none" name="range"> I don't really care</label><br><br>
-
-### 10 - Does the idea of stances / multiple movesets / buffed attacks sound appealing?
-<label><input type="radio" id="yes" name="stance"> I like the idea and it can help my game or sounds really fun</label><br>
-<label><input type="radio" id="no" name="stance"> I would prefer to just play a character with one moveset</label><br>
-<label><input type="radio" id="none" name="stance"> No preference</label><br><br>
-
-### 11 - Are you ok with charge inputs (holding one direction, then inputting opposite direction) for your special moves?
-<label><input type="radio" id="yes" name="charge"> Yes, they sound cool to useI</label><br>
-<label><input type="radio" id="strong_no" name="charge"> I want to use a character that has 0 charge motions</label><br>
-<label><input type="radio" id="none" name="charge"> No preference</label><br><br>
-
-### 12 - What is your preferred way of opening people up?
-<label><input type="radio" id="frametrap" name="gameplan"> Making them guess if you will throw or attack them </label><br>
-<label><input type="radio" id="risc" name="gameplan"> Barrage them with attacks until they get hit</label><br>
-<label><input type="radio" id="grab" name="gameplan"> Fish for a powerful grab</label><br>
-<label><input type="radio" id="highlow" name="gameplan"> Making them guess if you are attacking high or low</label><br>
-<label><input type="radio" id="leftright" name="gameplan"> Making them guess if you are attacking them from the left or the right</label><br>
-<label><input type="radio" id="none" name="gameplan"> No preference</label><br><br>
-
-### 13 - Does the idea of setplay (pre-placing projectile traps and following up) sound appealing?
-
-<label><input type="radio" id="neutral" name="setplay"> I like the idea of setting up while nothing is happening</label><br>
-<label><input type="radio" id="oki" name="setplay"> I like the idea of setting up while I have an advantage</label><br>
-<label><input type="radio" id="no" name="setplay"> I would rather have a moveset that has minimal to no setplay</label><br>
-<label><input type="radio" id="none" name="setplay"> No preference</label><br><br>
-
-### 14 - Would you like a projectile?
-<label><input type="radio" id="standard" name="projectile"> I want a simple full screen projectile</label><br>
-<label><input type="radio" id="limited" name="projectile"> I want a normal projectile that just controls space, doesn't have to be fullscreen</label><br>
-<label><input type="radio" id="special" name="projectile"> I want a unique, controllable, or difficult to use projectile</label><br>
-<label><input type="radio" id="no" name="projectile"> I do not need projectiles to win</label><br>
-<label><input type="radio" id="none" name="projectile"> No preference</label><br><br>
-
-### 15 - What kind of counter/parry would you like?
-<label><input type="radio" id="meterless" name="reversal"> I want to be able to easily counter/parry their offense</label><br>
-<label><input type="radio" id="metered" name="reversal"> I don't need a counter/parry or it can be tied to my ultimate</label><br><br>
-
-### 16 - Pick the character resource type that sounds the most fun
-<label><input type="radio" id="meter" name="resource"> Managing an extra resource sounds fun</label><br>
-<label><input type="radio" id="ammo" name="resource"> Having ammunition, buff, or an extra summon to keep track of sounds fun!</label><br>
-<label><input type="radio" id="no" name="resource"> I don't want to manage any additional resources</label><br>
-<label><input type="radio" id="none" name="resource"> No preference</label><br><br>
-
-### 17 - How good do you want your knockdown pressure to be?
-<label><input type="radio" id="neutral" name="vortex"> I don't want anything special</label><br>
-<label><input type="radio" id="projectile" name="vortex"> I want to be able to set up while they are at a disadvantage</label><br>
-<label><input type="radio" id="lots" name="vortex"> I want to have so many different attacks that the opponent has to make a difficult guess on what I might do</label><br>
-<label><input type="radio" id="none" name="vortex"> No preference</label><br><br>
-
-### 18 - How difficult do you want your character to be?
-<label><input type="radio" id="hard" name="difficulty"> Hard to pick up but has a lot of skill expression</label><br>
-<label><input type="radio" id="medium" name="difficulty"> Medium or easy difficulty to pick up, but with skill impression as I improve</label><br>
-<label><input type="radio" id="easy" name="difficulty"> As easy as possible, with little skill expression</label><br>
-<label><input type="radio" id="none" name="difficulty"> I don't care how difficult the character is</label><br><br>
+function check_winner() {
+    var winners = [];
+    for (var char in characters) {
+        winners.push({score: characters[char].score, name: characters[char].name, image: characters[char].image}); 
+    }
+    winners.sort((a, b) => b.score - a.score);
+    return winners;
+}
 
 
-### 19 - What kind of character design do you want?
-<label><input type="radio" id="serious" name="design"> Serious. Guilty Gear is no place for whimsy.</label><br>
-<label><input type="radio" id="mixed" name="design"> In the middle / mixed</label><br>
-<label><input type="radio" id="silly" name="design"> Silly. There's always room for playfulness in the battlefield!</label><br>
-<label><input type="radio" id="none" name="design"> I don't care about the character's design</label><br><br>
-
-### 20 - What type of character do you want to play?
-<label><input type="radio" id="zoners" name="archetype">  Zoners - lots of projectiles and range to control space</label><br>
-<label><input type="radio" id="rushdown" name="archetype"> Rushdown - easily close gaps and whale on the other guy</label><br>
-<label><input type="radio" id="grappler" name="archetype"> Grappler - It's game over once you are in his grasp</label><br>
-<label><input type="radio" id="setplay" name="archetype"> Setplay - having to setup favorable situations during your advantage</label><br>
-<label><input type="radio" id="balanced" name="archetype"> Balanced - a mix of different archetypes</label><br>
-<label><input type="radio" id="none" name="archetype"> I do not care about archtypes</label><br><br>
-
-
-<button id="get_results" onclick="get_results();" class="btn">Get Results</button>
-
-<div id="modal" class="w3-modal">
-    <div class="w3-modal-content">
-        <div class="w3-container">
-            <span onclick="closeModal();" class="w3-button w3-display-topright">&times;</span>
-            <div id="modal_contents">
-                <br>
-                <div class="winner">
-                    <img id= "winner_img" src=""/>
-                    <p id="winner_name" class="modal_text"></p><br>
-                </div>
-                <p class="modal_text"> Other Characters you may like:</p>
-                <p id="others" class ="modal_text"></p>
-            </div>
-        </div>
-    </div>
-</div>
