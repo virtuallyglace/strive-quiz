@@ -97,7 +97,7 @@ If you don't understand a word, try clicking on it!
 <label><input type="radio" id="standard" name="projectile"> I want a simple full screen projectile</label><br>
 <label><input type="radio" id="limited" name="projectile"> I want a normal projectile that just controls space, doesn't have to be fullscreen</label><br>
 <label><input type="radio" id="special" name="projectile"> I want a unique, controllable, or difficult to use projectile</label><br>
-<label><input type="radio" id="no" name="projectile"> I do not need projectile to win</label><br>
+<label><input type="radio" id="no" name="projectile"> I do not need projectiles to win</label><br>
 <label><input type="radio" id="none" name="projectile"> No preference</label><br><br>
 
 ### 15 - What kind of counter/parry would you like?
